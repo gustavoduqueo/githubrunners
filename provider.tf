@@ -8,12 +8,12 @@ terraform {
   # State-data-file storage: type and path. S3 bucket and DynamoDB table must be exist on AWS Account
   backend "s3" {
     bucket                      = "gduque.tfstates"
-    key                         = "kubernentes/kubernetes.tfstate"
+    key                         = "githubrunners/githubrunners.tfstate"
     encrypt                     = true
     region                      = "us-east-1"
     shared_credentials_file    = "$HOME/.aws/credentials"
     profile                     = "awsitmlab60"
-    dynamodb_table              = "tfstate_kubernetes"
+    dynamodb_table              = "tfstate_githubrunners"
   }
 }
 

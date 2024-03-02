@@ -11,7 +11,7 @@ variable "vpc_cidr" {
 variable "vpc_name" {
     type = map(string)
     default = {
-      "default" = "VPCITMKubernetesDefault"
-      "dev"     = "VPCITMKubernetesDev"
+      "default" = "VPCITMGitlabRunnersDefault"
+      "dev"     = "VPCITMGitlabRunnersDev"
     }
 }
