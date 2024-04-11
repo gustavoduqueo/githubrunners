@@ -7,7 +7,7 @@ variable "vpc_cidr" {
     }
 }
 
-# VPC CIDR Block
+# VPC CIDR Name
 variable "vpc_name" {
     type    = map(string)
     default = {
