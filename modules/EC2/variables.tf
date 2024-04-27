@@ -39,3 +39,9 @@ variable "ec2_wordpress_subnet_id" {
   type        = string
   description = "EC2 Wordpress Subnet ID"
 }
+
+# EC2 Wordpress User_Data
+variable "ec2_wordpress_user_data" {
+  type        = string
+  description = "EC2 Wordpress User Data"
+}

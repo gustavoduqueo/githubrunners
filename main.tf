@@ -17,6 +17,7 @@ module "EC2" {
   ec2_wordpress_type          = var.ec2_wordpress_type[terraform.workspace]
   aws_keypair                 = var.aws_keypair[terraform.workspace]
   vpc_id                      = module.VPC.vpc_id
+  ec2_wordpress_user_data     = var.ec2_wordpress_user_data[terraform.workspace]
 }
 
 #module "EC2" {

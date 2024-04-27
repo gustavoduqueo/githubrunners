@@ -25,6 +25,7 @@ resource "aws_instance" "ec2_itm_wordpress" {
   subnet_id = var.ec2_wordpress_subnet_id
   key_name = var.aws_keypair
   security_groups = [aws_security_group.sgr_itm_wordpress.id]
+  user_data = var.ec2_wordpress_user_data
   tags = {
     Name = var.ec2_wordpress_name
   }
