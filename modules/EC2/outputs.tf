@@ -1,4 +1,4 @@
-output "vpc_id" {
+output "ec2_wordpress_id" {
   description = "Instance ID"
-  value = aws_instance.ec2_itm_githubrunner.id
+  value       = aws_instance.ec2_itm_wordpress.id
 }

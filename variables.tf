@@ -11,8 +11,8 @@ variable "vpc_cidr" {
 variable "vpc_name" {
     type    = map(string)
     default = {
-      "default" = "vpc_itm_githubrunners_default"
-      "dev"     = "vpc_itm_githubrunners_dev"
+      "default" = "vpc_itm_wordpress_default"
+      "dev"     = "vpc_itm_wordpress_dev"
     }
 }
 
@@ -29,8 +29,8 @@ variable "subnet_1_cidr" {
 variable "subnet_1_name" {
     type    = map(string)
     default = {
-      "default" = "subnet_githubrunners_default_1"
-      "dev"     = "subnet_githubrunners_dev_1"
+      "default" = "subnet_wordpress_default_1"
+      "dev"     = "subnet_wordpress_dev_1"
     }
 }
 
@@ -47,8 +47,8 @@ variable "subnet_2_cidr" {
 variable "subnet_2_name" {
     type    = map(string)
     default = {
-      "default" = "subnet_githubrunners_default_2"
-      "dev"     = "subnet_githubRunners_dev_2"
+      "default" = "subnet_wordpress_default_2"
+      "dev"     = "subnet_wordpress_dev_2"
     }
 }
 
@@ -56,21 +56,21 @@ variable "subnet_2_name" {
 variable "aws_keypair" {
     type    = map(string)
     default = {
-      "default" = "keyITMGithubRunners"
-      "dev"     = "keyITMGithubRunners"
+      "default" = "keyITMWordpress"
+      "dev"     = "keyITMWordpress"
   }
 }
 
-variable "ec2_githubrunner_ami" {
+variable "ec2_wordpress_ami" {
   type    = map(string)
   default = {
-      "default" = "ami-07761f3ae34c4478d"
-      "dev"     = "ami-07761f3ae34c4478d"
+      "default" = "ami-0a1179631ec8933d7"
+      "dev"     = "ami-0a1179631ec8933d7"
   }
 }
 
 # EC2 Github Runner Instance Type
-variable "ec2_githubrunner_type" {
+variable "ec2_wordpress_type" {
   type    = map(string)
   default = {
       "default" = "t2.micro"
@@ -79,19 +79,19 @@ variable "ec2_githubrunner_type" {
 }
 
 # EC2 Github Runner Instance Name
-variable "ec2_githubrunner_name" {
+variable "ec2_wordpress_name" {
   type    = map(string)
   default = {
-      "default" = "EC2_GithubRunner_Default"
-      "dev"     = "EC2_GithubRunner_Dev"
+      "default" = "EC2_Wordpress_Default"
+      "dev"     = "EC2_Wordpress_Dev"
   }
 }
 
 # EC2 Github Runner Instance Quantity
-variable "ec2_githubrunner_quantity" {
+variable "ec2_wordpress_quantity" {
   type    = map(string)
   default = {
-      "default" = 2
-      "dev"     = 2
+      "default" = 1
+      "dev"     = 1
   }
 }

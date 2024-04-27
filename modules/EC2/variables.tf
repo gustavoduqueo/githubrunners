@@ -1,41 +1,41 @@
+# VPC Wordpress ID
+variable "vpc_id" {
+  type        = string
+  description = "VPC Wordpress ID"
+}
+
 # AWS KeyPair
 variable "aws_keypair" {
-  type = string
+  type        = string
   description = "AWS KeyPair"
 }
 
-# EC2 Github Runner AMI
-variable "ec2_githubrunner_ami" {
-  type = string
-  description = "EC2 Github Runner AMI"
+# EC2 Wordpress AMI
+variable "ec2_wordpress_ami" {
+  type        = string
+  description = "EC2 Wordpress AMI"
 }
 
-# EC2 Github Runner Instance Type
-variable "ec2_githubrunner_type" {
-  type = string
-  description = "EC2 Github Runner Type"
+# EC2 Wordpress Instance Type
+variable "ec2_wordpress_type" {
+  type        = string
+  description = "EC2 Wordpress Type"
 }
 
-# EC2 Github Runner Instance quantity
-variable "ec2_githubrunner_quantity" {
-  type = number
-  description = "EC2 Github Runner Quantity"
+# EC2 Wordpress Instance quantity
+variable "ec2_wordpress_quantity" {
+  type        = number
+  description = "EC2 Wordpress Quantity"
 }
 
-# EC2 Github Runner Name
-variable "ec2_githubrunner_name" {
-  type = string
-  description = "EC2 Github Runner Name"
+# EC2 Wordpress Name
+variable "ec2_wordpress_name" {
+  type        = string
+  description = "EC2 Wordpress Name"
 }
 
-# EC2 Github Runner Subnet
-variable "ec2_githubrunner_subnet" {
-  type = string
-  description = "EC2 Github Runner Subnet ID"
-}
-
-# EC2 Github Runner Subnet
-variable "ec2_githubrunner_securitygroup" {
-  type = string
-  description = "EC2 Github Runner Security Group ID"
+# EC2 Wordpress Subnet
+variable "ec2_wordpress_subnet_id" {
+  type        = string
+  description = "EC2 Wordpress Subnet ID"
 }
