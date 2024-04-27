@@ -13,7 +13,7 @@ module "EC2" {
   ec2_wordpress_ami           = var.ec2_wordpress_ami[terraform.workspace]
   ec2_wordpress_name          = var.ec2_wordpress_name[terraform.workspace]
   ec2_wordpress_quantity      = var.ec2_wordpress_quantity[terraform.workspace]
-  ec2_wordpress_subnet_id     = module.VPC.subnet_id
+  ec2_wordpress_subnet_id     = module.VPC.ec2_wordpress_subnet_id
   ec2_wordpress_type          = var.ec2_wordpress_type[terraform.workspace]
   aws_keypair                 = var.aws_keypair[terraform.workspace]
   vpc_id                      = module.VPC.vpc_id
