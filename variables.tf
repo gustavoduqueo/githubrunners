@@ -69,7 +69,7 @@ variable "ec2_wordpress_ami" {
   }
 }
 
-# EC2 Github Runner Instance Type
+# EC2 Wordpress Instance Type
 variable "ec2_wordpress_type" {
   type    = map(string)
   default = {
@@ -78,7 +78,7 @@ variable "ec2_wordpress_type" {
   }
 }
 
-# EC2 Github Runner Instance Name
+# EC2 Wordpress Instance Name
 variable "ec2_wordpress_name" {
   type    = map(string)
   default = {
@@ -87,11 +87,27 @@ variable "ec2_wordpress_name" {
   }
 }
 
-# EC2 Github Runner Instance Quantity
+# EC2 Wordpress Instance Quantity
 variable "ec2_wordpress_quantity" {
   type    = map(string)
   default = {
       "default" = 1
       "dev"     = 1
+  }
+}
+
+# EC2 Wordpress User_Data
+variable "ec2_wordpress_user_data" {
+  type = map(string)
+  default = {
+    "default" = <<EOF
+#!/bin/bash
+yum update -y
+amazon-linux-extras install mariadb10.5
+amazon-linux-extras install php8.2
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+EOF
   }
 }
