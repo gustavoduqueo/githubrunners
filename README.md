@@ -1,3 +1,3 @@
-# Proyecto para lanzar runners de Github en AWS usando Terraform
+# Proyecto para desplegar recursos de AWS usando Github Actions
 
 Desarrolado por: Gustavo Duque Osorio
