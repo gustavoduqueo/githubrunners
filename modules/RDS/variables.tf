@@ -3,6 +3,12 @@ variable "rds_sng_name" {
   description = "RDS Subnet Group Name"
 }
 
+# VPC Wordpress ID
+variable "vpc_id" {
+  type        = string
+  description = "VPC Wordpress ID"
+}
+
 variable "ec2_wordpress_subnet_id" {
   type        = string
   description = "RDS Subnet 1 ID Attached to Subnet Group"
