@@ -20,13 +20,17 @@ module "EC2" {
   ec2_wordpress_user_data     = var.ec2_wordpress_user_data[terraform.workspace]
 }
 
-#module "EC2" {
-#  source = "./modules/EC2"
-#  ec2_githubrunner_ami = var.ec2_githubrunner_ami[terraform.workspace]
-#  ec2_githubrunner_name = var.ec2_githubrunner_name[terraform.workspace]
-#  ec2_githubrunner_quantity = var.ec2_githubrunner_quantity[terraform.workspace]
-#  ec2_githubrunner_type = var.ec2_githubrunner_type[terraform.workspace]
-#  aws_keypair = var.aws_keypair[terraform.workspace]
-#  ec2_githubrunner_subnet = module.VPC.subnet_id
-#  ec2_githubrunner_securitygroup = module.VPC.securitygroup_id
-#}
+module "RDS" {
+  source = "./modules/RDS"
+  ec2_wordpress_subnet_id = module.VPC.ec2_wordpress_subnet_id
+  ec2_wordpress_subnet_id_2 = module.VPC.ec2_wordpress_subnet_id_2
+  rds_dbname = var.rds_dbname[terraform.workspace]
+  rds_engine = var.rds_engine[terraform.workspace]
+  rds_engine_version = var.rds_engine_version[terraform.workspace]
+  rds_instance_class = var.rds_instance_class[terraform.workspace]
+  rds_sng_name = var.rds_sng_name[terraform.workspace]
+  rds_allocated_storage = var.rds_allocated_storage[terraform.workspace]
+  rds_username = var.rds_username[terraform.workspace]
+  rds_password = var.rds_password[terraform.workspace]
+  rds_parameter_group_name = var.rds_parameter_group_name[terraform.workspace]
+}

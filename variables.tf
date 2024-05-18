@@ -61,6 +61,8 @@ variable "aws_keypair" {
   }
 }
 
+# EC2 AMI
+
 variable "ec2_wordpress_ami" {
   type    = map(string)
   default = {
@@ -118,5 +120,86 @@ yum install -y httpd
 systemctl start httpd
 systemctl enable httpd
 EOF
+  }
+}
+
+# RDS DB Subnet Group Name
+variable "rds_sng_name" {
+  type    = map(string)
+  default = {
+      "default" = "sng_defjampy"
+      "dev"     = "sng_devjampy"
+  }
+}
+
+# RDS DB Name
+variable "rds_dbname" {
+  type    = map(string)
+  default = {
+      "default" = "defjampy"
+      "dev"     = "devjampy"
+  }
+}
+
+# RDS DB Engine
+variable "rds_engine" {
+  type    = map(string)
+  default = {
+      "default" = "mysql"
+      "dev"     = "mysql"
+  }
+}
+
+# RDS DB Engine Version
+variable "rds_engine_version" {
+  type    = map(string)
+  default = {
+      "default" = "8.0"
+      "dev"     = "8.0"
+  }
+}
+
+# RDS DB Instance Class
+variable "rds_instance_class" {
+  type    = map(string)
+  default = {
+      "default" = "db.t3.micro"
+      "dev"     = "db.t3.micro"
+  }
+}
+
+# RDS DB Allocated Storage
+variable "rds_allocated_storage" {
+  type    = map(string)
+  default = {
+      "default" = 10
+      "dev"     = 10
+  }
+}
+
+# RDS DB Username
+variable "rds_username" {
+  type    = map(string)
+  default = {
+      "default" = "admin"
+      "dev"     = "admin"
+  }
+}
+
+# RDS DB Password
+variable "rds_password" {
+  type    = map(string)
+  default = {
+      "default" = "admindbjampy"
+      "dev"     = "admindbjampy"
+  }
+}
+
+# RDS DB Parameter Group
+variable "rds_parameter_group_name" {
+  type    = map(string)
+  default = {
+      "default" = "default.mysql8.0"
+      "dev"     = "default.mysql8.0"
   }
 }
