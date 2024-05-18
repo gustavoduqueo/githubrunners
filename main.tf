@@ -28,9 +28,11 @@ module "RDS" {
   rds_engine = var.rds_engine[terraform.workspace]
   rds_engine_version = var.rds_engine_version[terraform.workspace]
   rds_instance_class = var.rds_instance_class[terraform.workspace]
+  vpc_id = module.VPC.vpc_id
   rds_sng_name = var.rds_sng_name[terraform.workspace]
   rds_allocated_storage = var.rds_allocated_storage[terraform.workspace]
   rds_username = var.rds_username[terraform.workspace]
   rds_password = var.rds_password[terraform.workspace]
   rds_parameter_group_name = var.rds_parameter_group_name[terraform.workspace]
+
 }
