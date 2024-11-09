@@ -12,7 +12,7 @@ terraform {
     encrypt                     = true
     region                      = "us-east-1"
     shared_credentials_file    = "$HOME/.aws/credentials"
-    profile                     = "awsitmlab60"
+    profile                     = "itm"
     dynamodb_table              = "tfstate_githubrunners"
   }
 }
@@ -21,6 +21,6 @@ terraform {
 provider "aws" {
   shared_config_files      = ["$HOME/.aws/config"]
   shared_credentials_files = ["$HOME/.aws/credentials"]
-  profile                  = "awsitmlab60"
+  profile                  = "itm"
   region                   = "us-east-1" 
 }

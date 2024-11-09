@@ -30,7 +30,7 @@ resource "aws_db_instance" "dbjampy" {
   username = var.rds_username
   password = var.rds_password
   parameter_group_name = var.rds_parameter_group_name
-  vpc_security_group_ids = aws_security_group.sgr_dbjampy.ID
+  vpc_security_group_ids = [aws_security_group.sgr_dbjampy.id]
   publicly_accessible = true
   skip_final_snapshot = true
   depends_on = [
