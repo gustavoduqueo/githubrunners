@@ -20,6 +20,7 @@ module "EC2" {
   ec2_wordpress_user_data     = var.ec2_wordpress_user_data[terraform.workspace]
 }
 
+/*
 module "RDS" {
   source = "./modules/RDS"
   ec2_wordpress_subnet_id = module.VPC.ec2_wordpress_subnet_id
@@ -36,3 +37,5 @@ module "RDS" {
   rds_parameter_group_name = var.rds_parameter_group_name[terraform.workspace]
 
 }
+
+*/

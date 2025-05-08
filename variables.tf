@@ -56,8 +56,8 @@ variable "subnet_2_name" {
 variable "aws_keypair" {
     type    = map(string)
     default = {
-      "default" = "keyITMWordpress"
-      "dev"     = "keyITMWordpress"
+      "default" = "KPITMLabVirtual2025"
+      "dev"     = "KPITMLabVirtual2025"
   }
 }
 
@@ -66,8 +66,8 @@ variable "aws_keypair" {
 variable "ec2_wordpress_ami" {
   type    = map(string)
   default = {
-      "default" = "ami-0a1179631ec8933d7"
-      "dev"     = "ami-0a1179631ec8933d7"
+      "default" = "ami-085386e29e44dacd7"
+      "dev"     = "ami-085386e29e44dacd7"
   }
 }
 
