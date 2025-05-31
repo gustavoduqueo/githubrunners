@@ -13,7 +13,7 @@ terraform {
     region                      = "us-east-1"
     shared_credentials_files    = ["$HOME/.aws/credentials"]
     profile                     = "default"
-    dynamodb_table              = "tfstate_githubrunners1"
+    use_lockfile                = true
   }
 }
 
