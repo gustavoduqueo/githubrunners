@@ -31,8 +31,8 @@ jobs:
         aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
         aws-region: ${{ env.AWS_REGION }}
     - name: Install Terraform
-        uses: hashicorp/setup-terraform@v3
-        with:
+      uses: hashicorp/setup-terraform@v3
+      with:
           terraform_version: latest
 
     # Deploy AWS Resources using Terraform
