@@ -56,8 +56,8 @@ variable "subnet_2_name" {
 variable "aws_keypair" {
     type    = map(string)
     default = {
-      "default" = "Key-ITMLabWeb1"
-      "dev"     = "Key-ITMLabWeb1"
+      "default" = "KPITMLabVirtual2025"
+      "dev"     = "KPITMLabVirtual2025"
   }
 }
 
